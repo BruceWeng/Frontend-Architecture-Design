@@ -7,4 +7,5 @@ Design frontend architecture that scales from user story.
 5. Store design
 6. Reducer design
 7. Epic design
-  1. Error handling
+8. Error handling
+9. Unit testing
