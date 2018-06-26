@@ -1,23 +1,25 @@
 import * as React from "react";
+import UserRow from "./UserRow";
 
 interface IUser {
+    key: string,
     name: string,
     picture: string
 }
+
 interface IUserListProps {
     data: IUser[]
 }
 
-class UserList extends React.Component<IUserListProps> {
-    public constructor(props: IUserListProps) {
-        super(props);
-    }
-
-    public render() {
-        return (
-            <ul>Hi</ul>
-        )
-    }
+const UserList = (props: IUserListProps) => {
+    return (
+        // Put <li> array between <ul> tags
+        <ul>
+            {props.data.map((user) => {
+                return <UserRow key={user.key} name={user.name} picture={user.picture} />
+            })}
+        </ul>
+    );
 }
 
 export default UserList;
