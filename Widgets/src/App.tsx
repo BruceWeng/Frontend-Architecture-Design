@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 import Form from "./components/form/Form";
 import UserList from "./components/list/UserList";
+import Table from "./components/table/Table";
 
 interface IUser {
     key: string,
@@ -18,9 +19,9 @@ class App extends React.Component<any, IAppState> {
         super(props);
         this.state = {
             data: [
-                {key: "1", name: "Bruce", picture: "Bruce URL"},
-                {key: "2", name: "Emily", picture: "Emily URL"},
-                {key: "3", name: "Bryan", picture: "Bryan URL"}
+                {key: "A", name: "Bruce", picture: "Bruce URL"},
+                {key: "B", name: "Emily", picture: "Emily URL"},
+                {key: "C", name: "Bryan", picture: "Bryan URL"}
             ]
         }
     }
@@ -29,6 +30,7 @@ class App extends React.Component<any, IAppState> {
       <div className="App">
         <Form />
         <UserList data={this.state.data} />
+        <Table data={this.state.data} />
       </div>
     );
   }
