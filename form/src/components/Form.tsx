@@ -15,11 +15,13 @@ class Form extends React.Component<any, IFormStates> {
     public render() {
         // Do not create Input component because onChange function interface might
         // be conflicted to different event handler
+
+        // Scalable by adding more input with ids
         return (
-            <div>
+            <form onSubmit={this.handleSubmit}>
                 <input id="1" name="search-bar" type="txet" value={this.state.value} onChange={this.handleChange}/>
-                <input id="2" name="submit-button" type="submit" value="Submit" onClick={this.handleSubmit}/>
-            </div>
+                <input name="submit-button" type="submit" value="Submit"/>
+            </form>
         );
     }
 
