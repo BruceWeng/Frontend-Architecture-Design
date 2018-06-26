@@ -12,6 +12,8 @@ interface ITableProps {
 }
 
 const Table = (props: ITableProps) => {
+    // Add <th /> for first blank col
+    // Object.keys iterate keys in object and push them in array
     return (
         <table>
             <thead>

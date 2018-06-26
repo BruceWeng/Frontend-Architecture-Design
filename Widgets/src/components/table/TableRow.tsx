@@ -13,6 +13,8 @@ interface ITableRowProps {
 }
 
 const TableRow = (props: ITableRowProps) => {
+    // rowID passed from TableRow props to make unique key with colID
+    // Object.values iterate values in object and push them in array
     const rowID = props.rowID;
     return (
         <tr>
