@@ -15,7 +15,7 @@ interface IAppState {
 }
 
 class App extends React.Component<any, IAppState> {
-    constructor(props: any) {
+    public constructor(props: any) {
         super(props);
         this.state = {
             data: [
@@ -25,15 +25,16 @@ class App extends React.Component<any, IAppState> {
             ]
         }
     }
-  public render() {
-    return (
-      <div className="App">
-        <Form />
-        <UserList data={this.state.data} />
-        <Table data={this.state.data} />
-      </div>
-    );
-  }
+    
+    public render() {
+        return (
+            <div className="App">
+                <Form />
+                <UserList data={this.state.data} />
+                <Table data={this.state.data} />
+            </div>
+        );
+    }
 }
 
 export default App;
