@@ -19,7 +19,7 @@ class Form extends React.Component<any, IFormStates> {
         // Scalable by adding more input with ids
         return (
             <form onSubmit={this.handleSubmit}>
-                <input id="1" name="search-bar" type="txet" value={this.state.value} onChange={this.handleChange}/>
+                <input id="1" name="search-bar" type="text" value={this.state.value} onChange={this.handleChange}/>
                 <input name="submit-button" type="submit" value="Submit"/>
             </form>
         );
@@ -31,8 +31,8 @@ class Form extends React.Component<any, IFormStates> {
     }
 
     private updateStateValue = (target: HTMLInputElement) => {
-        const { value } = target;
-        this.setState({ value });
+        const { value } = target; // const value = target.value;
+        this.setState({ value }); // thie.setState({ value: value });
     }
 
     private handleSubmit = () => {
