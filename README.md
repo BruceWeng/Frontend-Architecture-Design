@@ -20,7 +20,14 @@
 4. Redux Ducks
 5. Write Unit tests
 6. Use payload-based actions
-7. Side-effecs with Sagas
+7. Side-effecs with Sagas 
+
+     a. Arrange saga by feature
+     
+     b. Consolidate and register with sagas/index.js
+
+     c. Export only top-level sagas
+
 8. Normalized the state like a db
 9. Selectors are helpful
 10. Flow and TypeScript helped
